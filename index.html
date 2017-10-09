@@ -2,19 +2,15 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 <a-assets>
-    <a-asset-item id="tree" src="/SmilingFace.gltf" opacity="0.5"></a-asset-item>
+    <a-asset-item id="tree" src="/SmilingFace.gltf"></a-asset-item>
 </a-assets>
 
 <body style='margin : 0px; overflow: hidden;'>
 	<a-scene embedded arjs='trackingMethod: best;'>
 
-    <a-marker type='pattern' patternUrl='apple.patt'>
-      <a-box position='0 0.5 0' material='color: red; opacity:0.5;'></a-box>
-    </a-marker>
-
     <a-marker preset='kanji'>
       <!-- here define the content to display on top of the marker -->
-      <a-box position='0 0.5 0' material='color: green; opacity:0.5;'></a-box>
+      <a-text value="Hello, World!"></a-text>      
     </a-marker>
 
     <a-marker preset='hiro'>
