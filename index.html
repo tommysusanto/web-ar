@@ -2,6 +2,7 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 
+<!-- Use these 2 scripts to animate 3D model -->
 <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.3/dist/aframe-extras.min.js"></script>
 <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
 
@@ -14,24 +15,24 @@
 	<a-scene embedded arjs='trackingMethod: best; debugUIEnabled: false'>
 
     <a-marker preset='kanji'>
-      <!-- here define the content to display on top of the marker -->
+      <!-- Simple box -->
       <a-box position='0 0.5 0' material='color: green; opacity:0.5;'></a-box>
     </a-marker>
 
     <a-marker preset='hiro'>
-      <!-- here define the content to display on top of the marker -->
+      <!-- Animated 3D model -->
       <a-entity position="0 0 0"
       animation-mixer="clip: *;"
       gltf-model-next="src: url(/BrainStem.gltf);">
       </a-entity>
     </a-marker>
 
-    
+    <!-- Static 3D Model -->
     <!-- <a-marker preset='kanji'>
         <a-entity gltf-model="#tree"></a-entity>        
     </a-marker> -->
 
-
+    <!-- Custom pattern marker -->
     <!-- <a-marker type='pattern' url='/isobar-pattern-marker.patt'>  
           <a-box position='0 0.5 0' material='color: red;'></a-box>
     </a-marker> -->
