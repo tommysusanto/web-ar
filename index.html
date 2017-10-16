@@ -2,6 +2,9 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
 <script src="/lib/aframe-ar.js"></script>
 
+<link rel="shortcut icon" href="">
+
+
 <!-- This is the original address of the script, uncomment this once the pull request is merged-->
 <!-- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script> -->
 
@@ -17,7 +20,7 @@
 <body style='margin : 0px; overflow: hidden;'>
 	<a-scene embedded arjs='trackingMethod: best; debugUIEnabled: false'>
     
-    <a-marker type='pattern' url='/assets/isobar_qr_code_xs.patt'>
+    <a-marker type='pattern' url='/assets/pattern-marker.patt'>
         <a-entity position="0 0 0"
         animation-mixer="clip: *;"
         gltf-model-next="src: url(/assets/BrainStem.gltf);">
