@@ -16,7 +16,8 @@
 
 <script>
 document.addEventListener("click", function(e){
-    console.log(e.detail.target.id)
+    var target = e.detail.target;
+    target.setAttribute('color', 'blue');
 });
 </script>
 
