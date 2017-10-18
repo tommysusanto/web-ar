@@ -4,8 +4,6 @@
 
 <script src="https://rawgit.com/blairmacintyre/aframe-look-at-billboard-component/master/dist/aframe-look-at-billboard-component.min.js"></script>
 
-<link rel="shortcut icon" href="">
-
 <!-- This is the original address of the script, uncomment this once the pull request is merged-->
 <!-- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script> -->
 
@@ -13,52 +11,16 @@
 <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.3/dist/aframe-extras.min.js"></script>
 <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
 
-
-<a-assets>
-    <a-asset-item id="tree" src="/assets/duck.dae"></a-asset-item>
-</a-assets>
-
 <body style='margin : 0px; overflow: hidden;'>
 	<a-scene embedded arjs='trackingMethod: best; debugUIEnabled: false'>
-    
-    <a-marker type='pattern' url='/assets/pattern-marker.patt'>
-        <a-entity position="0 0 0"
-        animation-mixer="clip: *;"
-        gltf-model-next="src: url(/assets/BrainStem.gltf);">
-        </a-entity>
-    </a-marker>
 
     <a-marker type='pattern' url='/assets/009999.patt'>
         <a-box position='0 0.5 0' material='color: red; opacity:0.5;'></a-box>                
     </a-marker>
 
     <a-marker type='pattern' url='/assets/001100.patt'>
-        <a-entity 
-        position='0 0 0' text="value: When did the Titanic sink? 15 April 1912; width:3; wrapCount:20;" look-at="src: #player"></a-entity>
+        <a-box position='0 0.5 0' material='color: green; opacity:0.5;'></a-box>        
     </a-marker>
-
-    <!-- Simple box -->
-    <a-marker preset='kanji'>
-      <a-box position='0 0.5 0' material='color: green; opacity:0.5;'></a-box>
-    </a-marker>
-
-    <a-marker preset='hiro' id="Keukentafel">
-        <a-box position="-0.3 0.1 0" id="off" data-state="off" data-lamp-id="Keukentafel" cursor-listener width="0.2" height="0.05" rotation="0 0 0" color="#F03F35"></a-box>
-        <a-box position="0 0.1 0" id="cool" data-state="on" data-lamp-id="Keukentafel" cursor-listener width="0.2" height="0.1" rotation="0 0 0" color="#F5FAFA"></a-box>
-        <a-box position="0.3 0.1 0" id="normal" data-state="on" data-lamp-id="Keukentafel" cursor-listener width="0.2" height="0.1" rotation="0 0 0" color="#F8EAC9"></a-box>
-        <a-box position="0.6 0.1 0" id="warm" data-state="on" data-lamp-id="Keukentafel" cursor-listener width="0.2" height="0.1" rotation="0 0 0" color="#E7CB71"></a-box>
-    </a-marker>
-
-    <!-- Static 3D Model, Can't add this alongside gltf-model-next due to versioning issue -->
-    <!-- <a-marker preset='kanji'>
-        <a-entity gltf-model="#tree"></a-entity>        
-    </a-marker> -->
-
-    <!-- Custom pattern marker -->
-    <!-- <a-marker type='pattern' url='/isobar-pattern-marker.patt'>  
-          <a-box position='0 0.5 0' material='color: red;'></a-box>
-    </a-marker> -->
-
     <!-- define a simple camera -->
     <a-entity id="player" camera></a-entity>
 	</a-scene>
