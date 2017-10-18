@@ -2,6 +2,7 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
 <script src="/lib/aframe-ar.js"></script>
 
+<!-- Script to get an object to face another object or camera -->
 <script src="https://rawgit.com/blairmacintyre/aframe-look-at-billboard-component/master/dist/aframe-look-at-billboard-component.min.js"></script>
 
 <!-- This is the original address of the script, uncomment this once the pull request is merged-->
@@ -18,14 +19,12 @@
 	<a-scene embedded arjs='trackingMethod: best; debugUIEnabled: false'>
 
     <a-marker type='pattern' url='/assets/001100.patt'>
-        <a-box position="0 -5 0" color="skyblue">
+        <a-box position="0 0.5 0" color="skyblue" material='opacity:0.5;'>
         <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
         </a-box>       
     </a-marker>
     <!-- define a simple camera -->
-    <a-entity camera look-controls mouse-cursor>
-            <a-cursor fuse="true" color="yellow"></a-cursor>
+    <a-entity camera mouse-cursor>
     </a-entity>
-
 	</a-scene>
 </body>
