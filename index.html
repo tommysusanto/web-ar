@@ -14,12 +14,17 @@
 
 <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
 
+<script>
+document.addEventListener("click", function(e){
+    console.log(e.detail.target.id)
+});
+</script>
 
 <body style='margin : 0px; overflow: hidden;'>
 	<a-scene embedded arjs='trackingMethod: best; debugUIEnabled: false'>
 
     <a-marker type='pattern' url='/assets/001100.patt'>
-        <a-box position="0 0.5 0" color="skyblue" material='opacity:0.5;'>
+        <a-box id="box1" position="0 0.5 0" color="skyblue" material='opacity:0.5;'>
         <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
         </a-box>       
     </a-marker>
